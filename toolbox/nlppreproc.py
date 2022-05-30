@@ -3,7 +3,7 @@ import string
 from nltk.stem.wordnet import WordNetLemmatizer
 from nltk import word_tokenize
 
-def clean (text):
+def clean(text):
     for punctuation in string.punctuation:
         text = text.replace(punctuation, ' ') # Remove Punctuation
     lowercased = text.lower() # Lower Case
@@ -14,7 +14,3 @@ def clean (text):
     lemma=WordNetLemmatizer() # Initiate Lemmatizer
     lemmatized = [lemma.lemmatize(word) for word in without_stopwords] # Lemmatize
     return lemmatized
-
-if __name__ == "__main__":
-
-    print('Hello')
